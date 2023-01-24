@@ -1,0 +1,19 @@
+{
+  "name": "vending-machine",
+  "version": "1.0.0",
+  "description": "n/a",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlescrabtree/Vending-machine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlescrabtree/Vending-machine/issues"
+  },
+  "homepage": "https://github.com/charlescrabtree/Vending-machine#readme"
+}

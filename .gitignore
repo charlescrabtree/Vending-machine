@@ -1,0 +1,2 @@
+node_modules
+#ignore packages downloaded by npm
