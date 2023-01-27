@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/charlescrabtree/Vending-machine#readme",
   "dependencies": {
-    "jest": "^29.4.1"
+    "jest": "^29.4.1",
+    "jsdoc": "^4.0.0"
   }
 }

@@ -1,4 +1,14 @@
+/**
+ * @file Vending machine change calculator
+ * 
+ * @requires process
+ */
+
 const process = require('process');
+/**
+ * @imports imports parseArgs from parse-args.js
+ * */
+
 const { parseArgs } = require('./parse-args.js');
 
 const { itemCost, payment } = parseArgs(process.argv);
@@ -7,6 +17,22 @@ const { itemCost, payment } = parseArgs(process.argv);
 // Nickels === 5
 // Dollars === 100
 
+/**
+ * @function calculateChange
+ * 
+ * @param {number} price - cost of the item
+ * @param {number} amountPaid - amount paid
+ * 
+ * @returns {string} - console.log the change in terms of quarters, dimes, nickels, pennies and the total change
+ * */
+
+/**
+@function calculateChange
+@param {number} price - The price of the item being purchased.
+@param {number} amountPaid - The amount paid by the customer.
+@returns {void} - This function calculates the change due to a customer and outputs the number of each coin needed to make change and the total change in the console.
+*/
+
 function calculateChange(price, amountPaid) {
   let change = amountPaid - price;
   let quarters = 0;
@@ -14,6 +40,7 @@ function calculateChange(price, amountPaid) {
   let nickels = 0;
   let pennies = 0;
 
+  // Uses while loops to determine the amount of each coin needed to make change 
   while (change >= 25) {
     change -= 25;
     quarters += 1;
@@ -34,10 +61,13 @@ function calculateChange(price, amountPaid) {
     pennies += 1;
   }
 
+  //finds the longest number of coins needed to make change
   let maxCoin = Math.max(quarters, dimes, nickels, pennies);
 
+  //finds the length of the longest number of coins needed to make change
   let maxCoinLen = maxCoin.toString().length;
 
+  //checks and prints the amount of each coin needed to make change.
   if (quarters > 0) {
     console.log(`Quarters: ${quarters.toString().padStart(maxCoinLen)}`);
   }
@@ -51,7 +81,9 @@ function calculateChange(price, amountPaid) {
     console.log(`Pennies: ${pennies.toString().padStart(maxCoinLen)}`);
   }
 
+  //prints the total change
   console.log(`Total Change: $${(amountPaid - price) / 100}`);
 }
 
+//calls the calculateChange function and outputs the result in terminal
 console.log(calculateChange(itemCost, payment));
