@@ -4,7 +4,7 @@
   "description": "n/a",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/charlescrabtree/Vending-machine/issues"
   },
-  "homepage": "https://github.com/charlescrabtree/Vending-machine#readme"
+  "homepage": "https://github.com/charlescrabtree/Vending-machine#readme",
+  "dependencies": {
+    "jest": "^29.4.1",
+    "jsdoc": "^4.0.0"
+  }
 }
